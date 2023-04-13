@@ -1,7 +1,6 @@
 {
   "name": "nodejs-challenge",
   "version": "1.0.0",
-  "dependencies": {},
   "devDependencies": {
     "@types/node": "^13.5.3",
     "typescript": "^3.7.5"
