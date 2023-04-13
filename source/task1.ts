@@ -29,8 +29,6 @@ function decryptFile(
   fs.writeFileSync(decryptedFilePath, decryptedData);
 }
 
-decryptFile(encryptedFilePath, decryptedFilePath, ivFilePath, authFilePath);
-
 const zipFilePath = "clear_smaller.txt.zip";
 const writeFilePath = "unzipped_clear_smaller.txt";
 
@@ -42,4 +40,6 @@ function unzipFile(zipFilePath, writeFilePath) {
   fileContents.pipe(unzipFile).pipe(writeStream);
 }
 
-// unzipFile(zipFilePath, writeFilePath);
+decryptFile(encryptedFilePath, decryptedFilePath, ivFilePath, authFilePath);
+
+unzipFile(zipFilePath, writeFilePath);
