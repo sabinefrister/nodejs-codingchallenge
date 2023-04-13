@@ -2,10 +2,10 @@ const cryptoNode = require("crypto");
 const fs = require("fs");
 const zlib = require("zlib");
 
-const encryptedFilePath = "./secret.enc";
-const decryptedFilePath = "./uncrypted-secret.zip";
-const ivFilePath = "./iv.txt";
-const authFilePath = "./auth.txt";
+const encryptedFilePath = "secret.enc";
+const decryptedFilePath = "uncrypted-secret.zip";
+const ivFilePath = "iv.txt";
+const authFilePath = "auth.txt";
 
 function decryptFile(
   encryptedFilePath,
@@ -29,10 +29,10 @@ function decryptFile(
   fs.writeFileSync(decryptedFilePath, decryptedData);
 }
 
-// decryptFile(encryptedFilePath, decryptedFilePath, ivFilePath, authFilePath);
+decryptFile(encryptedFilePath, decryptedFilePath, ivFilePath, authFilePath);
 
-const zipFilePath = "./clear_smaller.txt.zip";
-const writeFilePath = "./unzipped_clear_smaller.txt";
+const zipFilePath = "clear_smaller.txt.zip";
+const writeFilePath = "unzipped_clear_smaller.txt";
 
 function unzipFile(zipFilePath, writeFilePath) {
   const fileContents = fs.createReadStream(zipFilePath);
